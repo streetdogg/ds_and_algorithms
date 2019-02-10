@@ -72,11 +72,31 @@ void reverse(){
     }
 }
 
+/*
+ * Pass each array element to another function
+ */
+void check_val(int num){
+    (num%2) ? printf("Number is odd!\n"): printf("Number is even!\n");
+}
+
+/*
+ * Pass an array element to another function.
+ */
+void pass_to_function(){
+    int array[MAX_ARRAY_SIZE];
+
+    for (int i=0; i<MAX_ARRAY_SIZE; i++){
+        printf("Enter an element: ");
+        scanf("%d", &array[i]);
+        check_val(array[i]);
+    }
+}
+
 int main(){
     int choice;
 
     do {
-        printf("\nChoose one of the following:\n1. Read and print an array.\n2. Find smallest and largest.\n3. Reverse\n0. Exit\nChoice: ");
+        printf("\nChoose one of the following:\n1. Read and print an array.\n2. Find smallest and largest.\n3. Reverse\n4. Pass Array elements to function\n0. Exit\nChoice: ");
         scanf("%d", &choice);
 
         switch (choice){
@@ -86,11 +106,12 @@ int main(){
                 break;
         case 3: reverse();
                 break;
+        case 4: pass_to_function();
+                break;
         default:
                 break;
         }
     } while(choice);
-
 
     return 0;
 }
