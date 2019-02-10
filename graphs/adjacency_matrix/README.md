@@ -1,0 +1,1 @@
+Adjacency matrix mantains the information of the adjacent vertices.
