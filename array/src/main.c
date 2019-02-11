@@ -82,7 +82,7 @@ void check_val(int num){
 /*
  * Pass an array element to another function.
  */
-void pass_to_function(){
+void pass_element_to_function(){
     int array[MAX_ARRAY_SIZE];
 
     for (int i=0; i<MAX_ARRAY_SIZE; i++){
@@ -92,11 +92,43 @@ void pass_to_function(){
     }
 }
 
+/*
+ * Prints an array being passed.
+ */
+void print_array(int array[], int size){
+    for (int i=0; i<size; i++){
+        printf("%d ", array[i]);
+    }
+
+    printf("\n");
+}
+
+/*
+ * Passes the entire array to a function.
+ */
+void pass_array_to_function(){
+    int array[MAX_ARRAY_SIZE];
+
+    for (int i=0; i<MAX_ARRAY_SIZE; i++){
+        printf("Enter an element: ");
+        scanf("%d", &array[i]);
+    }
+
+    print_array(array, MAX_ARRAY_SIZE);
+}
+
 int main(){
     int choice;
 
     do {
-        printf("\nChoose one of the following:\n1. Read and print an array.\n2. Find smallest and largest.\n3. Reverse\n4. Pass Array elements to function\n0. Exit\nChoice: ");
+        printf("\nChoose one of the following:"
+                "\n1. Read and print an array."
+                "\n2. Find smallest and largest."
+                "\n3. Reverse."
+                "\n4. Pass Array elements to function."
+                "\n5. Pass entire Array to a function."
+                "\n0. Exit."
+                "\nChoice: ");
         scanf("%d", &choice);
 
         switch (choice){
@@ -106,7 +138,9 @@ int main(){
                 break;
         case 3: reverse();
                 break;
-        case 4: pass_to_function();
+        case 4: pass_element_to_function();
+                break;
+        case 5: pass_array_to_function();
                 break;
         default:
                 break;
