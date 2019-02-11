@@ -1,5 +1,5 @@
 PROJECT=array
-SRC= src/main.c
+SRC= src/main.c src/array.c
 INC=./inc/
 TEST=src/test.c
 
