@@ -144,13 +144,32 @@ void intput_and_display_matrix(){
  * prints Sum of matrices.
  */
 void sum_of_matrices(){
-    int mat_1[MAX_MAT_ROW][MAX_MAT_COL] ={{1,2,3,4},{5,6,7,8},{9,0,1,2}};
-    int mat_2[MAX_MAT_ROW][MAX_MAT_COL] ={{1,2,3,4},{5,6,7,8},{9,0,1,2}};
+    int mat_1[MAX_MAT_ROW][MAX_MAT_COL] = {{1,2,3,4},{5,6,7,8},{9,0,1,2}};
+    int mat_2[MAX_MAT_ROW][MAX_MAT_COL] = {{1,2,3,4},{5,6,7,8},{9,0,1,2}};
     int result[MAX_MAT_ROW][MAX_MAT_COL];
 
     for (int i=0; i<MAX_MAT_ROW; i++){
         for (int j=0; j<MAX_MAT_COL; j++){
             result[i][j] = mat_1[i][j] + mat_2[i][j];
+        }
+    }
+
+    print_matrix(result);
+}
+
+/*
+ * prints Multiplication of matrices.
+ */
+void matrix_multiplication(){
+    int mat_1[MAX_MAT_ROW][MAX_MAT_COL] = {{1,1,1,1},{1,1,1,1},{1,1,1,1}};
+    int mat_2[MAX_MAT_ROW][MAX_MAT_COL] = {{1,1,1,1},{1,1,1,1},{1,1,1,1}};
+    int result[MAX_MAT_ROW][MAX_MAT_COL] = {0};
+
+    for (int i=0; i<MAX_MAT_COL; i++){
+        for (int j=0; j<MAX_MAT_ROW; j++){
+            for (int k=0; k<MAX_MAT_ROW; k++){
+                result[k][i] += mat_1[k][i] * mat_2[j][i];
+            }
         }
     }
 

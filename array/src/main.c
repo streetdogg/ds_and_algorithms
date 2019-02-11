@@ -16,6 +16,7 @@ int main(){
                 "\n5. Pass entire Array to a function."
                 "\n6. Input and print a matrix."
                 "\n7. Sum of Matrices."
+                "\n8. Multiplication of Matrices."
                 "\n0. Exit."
                 "\nChoice: ");
         scanf("%d", &choice);
@@ -40,6 +41,9 @@ int main(){
                 break;
 
         case 7: sum_of_matrices();
+                break;
+
+        case 8: matrix_multiplication();
                 break;
 
         default:

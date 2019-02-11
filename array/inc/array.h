@@ -57,4 +57,9 @@ void intput_and_display_matrix();
  */
 void sum_of_matrices();
 
+/*
+ * prints Multiplication of matrices.
+ */
+void matrix_multiplication();
+
 #endif
