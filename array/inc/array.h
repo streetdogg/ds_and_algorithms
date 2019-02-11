@@ -4,6 +4,8 @@
 #include <stdio.h>
 
 #define MAX_ARRAY_SIZE 10
+#define MAX_MAT_ROW 3
+#define MAX_MAT_COL 4
 
 /*
  * Reads array elements from the user and then prints them out.
@@ -39,5 +41,20 @@ void print_array(int array[], int size);
  * Passes the entire array to a function.
  */
 void pass_array_to_function();
+
+/*
+ * Print Matrix.
+ */
+void print_matrix(int array[MAX_MAT_ROW][MAX_MAT_COL]);
+
+/*
+ * Input and display a matrix.
+ */
+void intput_and_display_matrix();
+
+/*
+ * prints Sum of matrices.
+ */
+void sum_of_matrices();
 
 #endif

@@ -110,3 +110,49 @@ void pass_array_to_function(){
 
     print_array(array, MAX_ARRAY_SIZE);
 }
+
+/*
+ * Print Matrix.
+ */
+void print_matrix(int array[MAX_MAT_ROW][MAX_MAT_COL]){
+    for (int i=0; i<MAX_MAT_ROW; i++){
+        for (int j=0; j<MAX_MAT_COL; j++){
+            printf("%d ", array[i][j]);
+        }
+
+        printf("\n");
+    }
+}
+
+/*
+ * Input and display a matrix.
+ */
+void intput_and_display_matrix(){
+    int array[MAX_MAT_ROW][MAX_MAT_COL];
+
+    for (int i=0; i<MAX_MAT_ROW; i++){
+        for (int j=0; j<MAX_MAT_COL; j++){
+            printf("Give me an array element: ");
+            scanf("%d", &array[i][j]);
+        }
+    }
+
+    print_matrix(array);
+}
+
+/*
+ * prints Sum of matrices.
+ */
+void sum_of_matrices(){
+    int mat_1[MAX_MAT_ROW][MAX_MAT_COL] ={{1,2,3,4},{5,6,7,8},{9,0,1,2}};
+    int mat_2[MAX_MAT_ROW][MAX_MAT_COL] ={{1,2,3,4},{5,6,7,8},{9,0,1,2}};
+    int result[MAX_MAT_ROW][MAX_MAT_COL];
+
+    for (int i=0; i<MAX_MAT_ROW; i++){
+        for (int j=0; j<MAX_MAT_COL; j++){
+            result[i][j] = mat_1[i][j] + mat_2[i][j];
+        }
+    }
+
+    print_matrix(result);
+}
