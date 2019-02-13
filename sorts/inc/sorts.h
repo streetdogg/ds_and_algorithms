@@ -13,4 +13,9 @@ void insertion_sort(int *array, int length);
  */
 void bubble_sort(int *array, int length);
 
+/*
+ * Selection sort
+ */
+void selection_sort(int *array, int length);
+
 #endif

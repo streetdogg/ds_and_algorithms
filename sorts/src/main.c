@@ -9,6 +9,7 @@ int main(){
     printf("Please select a Sort:\n"
         "1. Insertion sort.\n"
         "2. Bubble sort.\n"
+        "3. Selection sort.\n"
         "Choice: ");
     scanf("%d", &choice);
 
@@ -16,6 +17,8 @@ int main(){
     case 1: insertion_sort(unsorted_array, 100);
             break;
     case 2: bubble_sort(unsorted_array, 100);
+            break;
+    case 3: selection_sort(unsorted_array, 100);
             break;
     default:
             break;

@@ -31,3 +31,28 @@ void bubble_sort(int *array, int length) {
         }
     }
 }
+
+/*
+ * Selection sort
+ */
+void selection_sort(int *array, int length) {
+    int pivot, min;
+
+    for (pivot=0; pivot < length-1; pivot++) {
+
+        min = pivot;
+
+        for (int i=pivot; i<length; i++) {
+            if (array[i] <= array[min]){
+                min = i;
+            }
+        }
+
+        // swap if min is different than pivot
+        if (pivot != min){
+            array[pivot]   ^= array[min];
+            array[min]     ^= array[pivot];
+            array[pivot]   ^= array[min];
+        }
+    }
+}
