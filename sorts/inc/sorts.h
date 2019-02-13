@@ -3,6 +3,14 @@
 
 #include <stdio.h>
 
+/*
+ * Insertion Sort
+ */
 void insertion_sort(int *array, int length);
+
+/*
+ * Bubble Sort
+ */
+void bubble_sort(int *array, int length);
 
 #endif
