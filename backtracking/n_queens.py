@@ -12,7 +12,7 @@ BLANK = '-'
 
 def main():
     if len(sys.argv) != 2:
-        print ("usage: python n_queens.py BoardSize")
+        print ("usage: python3 n_queens.py BoardSize")
         return
     board_size = int(sys.argv[1])
     q = queen(board_size)
