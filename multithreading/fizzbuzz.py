@@ -107,6 +107,7 @@ class buzzFizz:
 
             if (self.num == 0):
                 break
+
 def main():
     if len(sys.argv) != 2:
         print ("usage: python3 fizzbuzz.py NUM")
