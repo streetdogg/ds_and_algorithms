@@ -1,16 +1,19 @@
-PROJECT = ice-cream_cone
-GCCFLAGS = -lpthread
+PROJECT = main
+GCCFLAGS = -lpthread -I./
+
+SOURCES = $(wildcard *.c)
+OBJECTS = $(SOURCES:.c=.o)
 
 run: $(PROJECT)
 	clear
-	./$(PROJECT)
+	@./$(PROJECT)
 
-$(PROJECT): $(PROJECT).o
-	gcc $< $(GCCFLAGS) -o $(PROJECT)
-	@rm $(PROJECT).o
+$(PROJECT): $(OBJECTS)
+	gcc $(OBJECTS) $(GCCFLAGS) -o $(PROJECT)
+	@rm $(OBJECTS)
 
-%.o: %.c
-	gcc -c $<
+%.o: %.c %.h
+	gcc -c $< $(GCCFLAGS)
 
 .PHONY: clean
 
